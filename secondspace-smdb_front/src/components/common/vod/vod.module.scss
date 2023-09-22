@@ -1,0 +1,59 @@
+.container {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trailer_mov {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 38%;
+  width: 100%;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.thumbnail_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.thumbnail_wrapper {
+  max-width: 320px;
+  &:hover {
+    .thumbnail {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.play_button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 70px 140px;
+}

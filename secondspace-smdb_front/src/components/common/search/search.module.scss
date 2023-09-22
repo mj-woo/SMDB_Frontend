@@ -1,0 +1,21 @@
+.search_container {
+  width: 328px;
+  height: 56px;
+  padding: 0px 12px 0px 28px;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $deepGray;
+  cursor: pointer;
+
+  p {
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

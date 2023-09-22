@@ -1,0 +1,49 @@
+.container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+      border-radius: 16px;
+      cursor: pointer;
+
+      background-color: #eeeeee;
+      transition: 0.1s ease;
+
+      a {
+        font-weight: 700;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1;
+      }
+
+      &:hover {
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.active {
+  color: $green;
+  background-color: $black;
+  text-decoration: underline;
+
+  &:hover {
+    filter: invert(0) !important;
+  }
+}

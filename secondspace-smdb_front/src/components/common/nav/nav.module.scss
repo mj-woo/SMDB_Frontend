@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .logo {
+    left: 10px;
+    padding: 14px 10px;
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+    gap: 80px;
+
+    li {
+      color: $lightBlack;
+      font-size: $menu;
+      font-weight: 800;
+      padding: 14px 4px;
+      a {
+        padding: 14px 4px;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .active {
+      color: $black;
+      box-shadow: rgb(34, 34, 34) 0px 3px 0px 0px;
+    }
+  }
+}

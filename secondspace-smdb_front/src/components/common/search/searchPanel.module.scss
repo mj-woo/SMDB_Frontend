@@ -1,0 +1,142 @@
+.container {
+  width: 328px;
+  background-color: #222222;
+  z-index: 1000;
+  padding: 6px 16px;
+
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  justify-content: center;
+
+  .close_btn {
+    padding: 10px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #222222;
+  padding: 0 28px;
+
+  > div:first-of-type {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    svg {
+      position: absolute;
+      right: 55px;
+    }
+
+    input {
+      width: 100%;
+      height: 44px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      transition: 0.2s ease;
+      padding-right: 40px;
+
+      &:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $green;
+      }
+    }
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    input[value] {
+      font-size: 16px;
+      color: $white;
+      font-weight: 700;
+    }
+    input::-ms-clear,
+    input::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .years {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .error {
+      color: #e8584f;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 400;
+      padding-left: 1em;
+    }
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 20px;
+
+    button {
+      height: 37px;
+      padding: 8px 16px;
+      transition: 0.2s ease;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    button:first-of-type {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    button:last-of-type {
+      background-color: rgba(44, 142, 113, 1);
+      color: $white;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
