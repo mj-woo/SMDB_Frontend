@@ -24,7 +24,7 @@ export default function PresentMovieCategory({
             <ListContainer
               data={data}
               handlePageClick={handlePageClick}
-              currentPage={meta.currentPage - 1}
+              currentPage={meta.currentPage}
               itemsPerPage={meta.itemsPerPage}
               pageCount={meta.totalPages}
               onClickCard={onClickMovie}
