@@ -17,8 +17,8 @@ export default function ScreeningContainer({ currentTab }: IMoviesProps) {
 
 	async function fetchMovies(page: number, currentTab: string | undefined) {
 		const queryStrings = {
-			offset: page,
-			limit: 15 * (page + 1),
+			page: page,
+			per_page: 15 * (page + 1),
 		};
 
 		if (currentTab !== prevTab) {
