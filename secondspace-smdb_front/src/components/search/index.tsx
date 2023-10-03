@@ -37,7 +37,7 @@ export default function SearchContainer() {
 
 		if (JSON.stringify(previousQuery) !== JSON.stringify(newQuery)) {
 			Object.assign(queryStrings, { page: 1, per_page: 15 });
-			setPage(0);
+			setPage(1);
 		}
 
 		if (!!newQuery?.genre && newQuery?.genre !== "all") {
