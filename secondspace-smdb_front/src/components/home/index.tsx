@@ -35,10 +35,10 @@ export default function HomeContainer() {
 	}
 
 	async function fetchMostLoved() {
-		const mostLoved = await getMostLoved({ page: 1, per_page: 15 });
+		const mostLoved = await getMostLoved({ page: 0, per_page: 15 });
 		const result = convertList({ data: mostLoved?.data });
 
-		fetchDetailData(result?.[1]);
+		fetchDetailData(result?.[0]);
 		setLatestData(result);
 	}
 
