@@ -44,8 +44,8 @@ export default function HomeContainer() {
 
 	async function fetchGenreData(selectedGenre: string) {
 		const queryStrings = {
-			offset: 0,
-			limit: 15,
+			page: 1,
+			per_page: 15,
 		};
 		if (selectedGenre !== "all") {
 			const genres = ALL_GENRE.find((genre) => genre.value === selectedGenre)?.name;
