@@ -51,7 +51,7 @@ export default function MovideDetailContaier({
 		}, "");
 
 		let queryStrings = {
-			page: 0,
+			page: 1,
 			per_page: 15,
 			genres,
 		};
