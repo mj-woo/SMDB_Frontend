@@ -35,7 +35,7 @@ export default function HomeContainer() {
 	}
 
 	async function fetchMostLoved() {
-		const mostLoved = await getMostLoved({ page: 0, per_page: 15 });
+		const mostLoved = await getMostLoved({ page: 1, per_page: 15 });
 		const result = convertList({ data: mostLoved?.data });
 
 		fetchDetailData(result?.[0]);
@@ -44,7 +44,7 @@ export default function HomeContainer() {
 
 	async function fetchGenreData(selectedGenre: string) {
 		const queryStrings = {
-			page: 0,
+			page: 1,
 			per_page: 15,
 		};
 		if (selectedGenre !== "all") {
