@@ -23,8 +23,8 @@ export default function ScreeningContainer({ currentTab }: IMoviesProps) {
 
 		if (currentTab !== prevTab) {
 			Object.assign(queryStrings, {
-				offset: 0,
-				limit: 15,
+				page: 1,
+				per_page: 15,
 			});
 			setPage(0);
 		}
