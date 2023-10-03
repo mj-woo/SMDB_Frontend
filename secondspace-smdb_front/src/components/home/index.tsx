@@ -44,7 +44,7 @@ export default function HomeContainer() {
 
 	async function fetchGenreData(selectedGenre: string) {
 		const queryStrings = {
-			page: 1,
+			page: 0,
 			per_page: 15,
 		};
 		if (selectedGenre !== "all") {
