@@ -41,7 +41,7 @@ export default function MovieCategoryContainer({ currentTab }: IMoviesProps) {
 	}
 
 	useEffect(() => {
-		setPage(0);
+		setPage(1);
 		setGenere(currentTab);
 	}, [currentTab]);
 
