@@ -26,7 +26,7 @@ export default function ScreeningContainer({ currentTab }: IMoviesProps) {
 				page: 1,
 				per_page: 15,
 			});
-			setPage(0);
+			setPage(1);
 		}
 
 		try {
