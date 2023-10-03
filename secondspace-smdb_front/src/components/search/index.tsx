@@ -30,13 +30,13 @@ export default function SearchContainer() {
 
 	async function fetchMovies(page: number, newQuery: any) {
 		const queryStrings = {
-			offset: page,
-			limit: 15 * (page + 1),
+			page: page,
+			per_page: 15 * (page + 1),
 		};
 		const previousQuery = router.query;
 
 		if (JSON.stringify(previousQuery) !== JSON.stringify(newQuery)) {
-			Object.assign(queryStrings, { offset: 0, limit: 15 });
+			Object.assign(queryStrings, { page: 1, per_page: 15 });
 			setPage(0);
 		}
 
