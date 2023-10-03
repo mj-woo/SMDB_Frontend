@@ -8,7 +8,7 @@ import { getFilterMovie } from "@/apis/movie.api";
 
 export default function MovieCategoryContainer({ currentTab }: IMoviesProps) {
 	const [data, setData] = useState<any[]>([]);
-	const [page, setPage] = useState<number>(0);
+	const [page, setPage] = useState<number>(1);
 	const [totalItems, setTotalItems] = useState<number>(0);
 	const [genere, setGenere] = useState<string | undefined>("all");
 
